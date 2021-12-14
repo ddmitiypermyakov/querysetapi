@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import Manager
 class a (models.Manager):
     pass
 # Create your models here.
@@ -17,6 +18,8 @@ class Auto(models.Model):
         verbose_name = 'Автомобиль'
         verbose_name_plural = 'Автомобили'
 
+    # MyManager=Manager()
+
 class Product(models.Model):
 
 
@@ -29,8 +32,8 @@ class Product(models.Model):
 class Brand(models.Model):
     name = models.CharField(max_length=80, verbose_name='Модель авто')
 
-    def __str__(self):
-        return self.name
+    # def __str__(self):
+    #     return self.name
 
     class Meta:
         verbose_name = 'бренд'

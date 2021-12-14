@@ -40,11 +40,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    'simple_elasticsearch',
     'debug_toolbar',
     'main',
+    'library',
 
 
+]
+ELASTICSEARCH_TYPE_CLASSES = [
+    'library.models.Car',
 ]
 
 MIDDLEWARE = [
@@ -91,9 +95,9 @@ WSGI_APPLICATION = 'djApi.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'less_db',
-        'USER': 'djdima',
-        'PASSWORD': 'djdima',
+        'NAME': 'less11_db',
+        'USER': 'djdima1',
+        'PASSWORD': 'djdima1',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }

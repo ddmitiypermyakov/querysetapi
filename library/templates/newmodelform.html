@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method = 'POST'>
+    {% csrf_token %}
+    {% for field in form %}
+    <p>
+       <span > {{field.name}} </span> {{field}}
+        <span>{{field.errors}}</span>
+    </p>
+    {% endfor %}
+    <button>Input</button>
+
+</form>
+</body>
+</html>

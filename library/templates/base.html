@@ -5,9 +5,13 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Тестовая страница</h1>
-{% for i in auto %}
-{{i.name}}
-{% endfor %}
+<h1>Hello</h1>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+<button>OK</button>
+
+</form>
 </body>
 </html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<form action="" method = 'POST'>
+    {% csrf_token %}
+
+
+    {% for i in form %}
+
+    <div>
+        <p>
+
+            {{i}}
+            <span class = "tool" >{{i}}</span>
+            <span data-tooltip = {{i.help_text}}>{{i}}</span>
+            {% if i.name in form.errors %}
+            <span style = "color:red">{{i.errors.as_text}}</span>
+            {% endif %}
+
+        </p>
+    </div>
+
+    {% endfor %}
+
+<button>OK</button>
+</form>
+<script>
+    let span= document.querySelectorAll('.tool')
+    for(let i of in inputs){
+    i.addEventListener
+
+    }
+    console.log(span)
+
+
+</script>
+</body>
+</html>

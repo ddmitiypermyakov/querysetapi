@@ -24,8 +24,14 @@ cursor = conn.cursor()
 
 # sql = """SELECT * FROM main_auto WHERE brand_id in (SELECT ID FROM main_brand WHERE name in ('LADA'));
 # sql = """SELECT * FROM main_auto WHERE brand_id in (SELECT ID FROM main_brand WHERE name = 'AUDI1' OR name = 'LADA1' OR name = 'fdfdg');
-sql = """SELECT * FROM main_auto WHERE brand_id in (SELECT ID FROM main_brand WHERE name NOT IN  ('AUDI') );
-        
+# sql = """SELECT * FROM main_auto WHERE brand_id in (SELECT ID FROM main_brand WHERE name NOT IN  ('AUDI') );
+# sql = """SELECT COUNT(DISTINCT name) as count_name FROM main_auto   ;
+#
+# """
+sql="""
+
+SELECT name ,price,  COUNT(*) AS bn from main_auto GROUP BY name,price HAVING price IN (12000,15000) ORDER BY name ;
+
 """
 # sql1 = '''SELECT * FROM  product  ;'''
 cursor.execute(sql)
